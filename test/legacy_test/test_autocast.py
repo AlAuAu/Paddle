@@ -42,7 +42,7 @@ class TestCudaAutoCast(unittest.TestCase):
         self._conv = paddle.nn.Conv2D(1, 1, 3, bias_attr=False)
         self._linear = paddle.nn.Linear(4, 4)
 
-    def _run_autocast_test(self, ctx):
+    def test_autocast(self):
         with paddle.autocast(
             device_type='cuda',
             enabled=True,
